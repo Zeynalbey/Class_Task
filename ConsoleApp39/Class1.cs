@@ -30,17 +30,35 @@ namespace ConsoleApp39
             Position = position;
             Salary = salary;
 
-            Name1(); Name2(); Name3();
-            Surname1(); Surname2(); Surname3();
-            FatherName1(); FatherName2(); FatherName3();
-            Age1();
-            FinNumber1(); FinNumber2();
-            PhoneNumber1(); PhoneNumber2(); PhoneNumber3();
-            Position1();
-            Salary1();
+            NameMethod();
+            SurnameMethod();
+            FatherNameMethod();
+            AgeMethod();
+            FinMethod();
+            PhoneMethod();
+            PositionMethod();
+            SalaryMethod();
             
             Console.ReadLine();
         }
+        public void NameMethod()
+        {
+            Name1(); Name2(); Name3();
+        }
+        public void SurnameMethod()
+        {
+            Surname1(); Surname2(); Surname3();
+        }
+        public void FatherNameMethod()
+        {
+            FatherName1(); FatherName2(); FatherName3();
+        }
+        public void PhoneMethod()
+        {
+            PhoneNumber1(); PhoneNumber2(); PhoneNumber3();
+        }
+
+
         public void Name1()
         {
             if (Name.Length < 2 || Name.Length > 20)
@@ -148,23 +166,21 @@ namespace ConsoleApp39
                 }
             }
         }
-        public void Age1()
+        public void AgeMethod()
         {
             if (Age < 18 || Age > 65)
             {
                 Console.WriteLine("Yas 18 ve 65 arasinda olmalidir");
             }
         }
-        public void FinNumber1()
+        public void FinMethod()
         {
+            char[] smallLeters = new[] { 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm' };
+
             if (Fin.Length != 7)
             {
                 Console.WriteLine("Fin 7-ye beraber olmalidir");
             }
-        }
-        public void FinNumber2()
-        {
-            char[] smallLeters = new[] { 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm' };
             for (int i = 0; i < smallLeters.Length; i++)
             {
                 for (int j = 0; j < Fin.Length; j++)
@@ -206,14 +222,14 @@ namespace ConsoleApp39
                 }
             }
         }
-        public void Position1()
+        public void PositionMethod()
         {
             if (Position != "HR" && Position != "Engineer" && Position != "Audit")
             {
                 Console.WriteLine("Pozisiya ancaq HR, Audit ve ya Engineer ola biler");
             }
         }
-        public void Salary1()
+        public void SalaryMethod()
         {
             if (Salary < 1500 || Salary > 5000)
             {
